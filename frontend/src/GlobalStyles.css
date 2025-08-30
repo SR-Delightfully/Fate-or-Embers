@@ -1,0 +1,118 @@
+:root {
+  --page-width: 1800px;
+  --page-height: 2100px;
+  --align-center-l: 50%;
+  --align-center-t: translate(-50%, 0);
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background-image: url("https://i.pinimg.com/736x/98/bb/b7/98bbb752c743f7640f52a54ce6814fd6.jpg");
+  background-size: 12%;
+}
+body::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: calc(100% + var(--page-height));
+  width: 100%;
+  filter: saturate(4) sepia(0.4) contrast(0.96); 
+  background: repeating-linear-gradient(
+  to right,
+  #030e00d0,
+  #030e00d0 2rem,
+  #000000 2rem,
+  #000000 4rem
+);
+;
+  position: absolute;
+  z-index: 0;
+}
+.pages {
+  border: 2px solid lime;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 1920px;
+  width: var(--page-width);
+  position: absolute;
+  top: 17rem;
+  left: var(--align-center-l);
+  transform: var(--align-center-t);
+}
+
+.page {
+  border: 2px solid hotpink;
+  height: var(--page-height);
+  width: var(--page-width);
+  background-color: blanchedalmond;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 17rem;
+  background: #000000;
+}
+
+#header {
+  background-color: darkgreen;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  height: 16rem;
+  width: var(--page-width);
+  top: 3rem;
+  left: var(--align-center-l);
+  transform: var(--align-center-t);
+  position: absolute;
+  z-index: 9999;
+}
+
+.navBar {
+  background-color: darkred;
+  position: relative;
+  z-index: 9999;
+  top: 18rem;
+  height: 4rem;
+  width: calc(var(--page-width) - (3rem * 2));
+  left: var(--align-center-l);
+  transform: var(--align-center-t);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+}
+.navBar > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  height: 18rem;
+  width: 7.25rem;
+  position: relative;
+}
+li > img {
+  position: absolute;
+  height: 18rem;
+  top: 0;
+}
+
+#eye {
+  top: 0;
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  object-position: 4% 6%;
+  zoom: 200%;
+  left: 0.30rem;
+  top: 0.78rem;
+  transition: 0.1s ease;
+}
+.homeTitleBanner {
+  position: absolute;
+  z-index: 9999;
+}
